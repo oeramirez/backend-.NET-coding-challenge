@@ -18,7 +18,20 @@ namespace Pyramid
     {
         private static void Pyramid(int height)
         {
-            Console.WriteLine("A beautiful pyramid");
+            for (int line = 0; line < height; line++)
+            {
+                for (int leadingSpace = 0; leadingSpace < height - line - 1; leadingSpace++)
+                {
+                    Console.Write(' ');
+                }
+                
+                for (int star = 0; star < (line * 2) + 1 ; star++)
+                {
+                    Console.Write('*');
+                }
+
+                Console.WriteLine();
+            }
         }
         
         public static void Main(string[] args)
